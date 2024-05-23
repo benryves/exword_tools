@@ -26,7 +26,7 @@
 #include <wx/txtstrm.h>
 #include <wx/tokenzr.h>
 
-Model Unknown;
+Model UnknownModel;
 
 ModelDatabase* ModelDatabase::m_self = 0;
 
@@ -71,7 +71,7 @@ Model& ModelDatabase::Lookup(wxString main, wxString sub, wxString ext)
     key.Printf(wxT("%s:%s:%s"), main.c_str(), sub.c_str(), ext.c_str());
     if (models.find(key) == models.end()) {
         wxLogMessage(_("Failed to find model information for device %s:%s:%s"), main.c_str(), sub.c_str(), ext.c_str());
-        return Unknown;
+        return UnknownModel;
     }
     return models[key];
 }
