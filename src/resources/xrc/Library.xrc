@@ -129,7 +129,7 @@
 								<orient>wxVERTICAL</orient>
 								<object class="sizeritem">
 									<option>0</option>
-									<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+									<flag>wxALL</flag>
 									<border>5</border>
 									<object class="wxButton" name="m_install">
 										<label>Install</label>
@@ -138,7 +138,7 @@
 								</object>
 								<object class="sizeritem">
 									<option>0</option>
-									<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+									<flag>wxALL</flag>
 									<border>5</border>
 									<object class="wxButton" name="m_remove">
 										<label>Remove</label>
