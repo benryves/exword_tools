@@ -61,7 +61,7 @@ TextLoaderFrame::TextLoaderFrame()
     m_status->SetFieldsCount(2, fieldWidths);
     m_filelist->InsertColumn(0, _("Filename"));
     m_filelist->SetColumnWidth(0, 485);
-    m_filelist->SetFont(wxFont(8, 76, 90, 90, false, wxEmptyString));
+    m_filelist->SetFont(wxFont(8, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
     m_filelist->SetDropTarget(new ExwordFileDropTarget(this));
     m_exword.SetEventTarget(this);
     m_progress = new ProgressDialog(this, wxT(""));
