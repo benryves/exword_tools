@@ -56,7 +56,7 @@ void DictionaryListCtrl::SetType(ListType t)
     } else {
         SetColumnWidths(0);
     }
-    SetFont(wxFont(8, 76, 90, 90, false, wxEmptyString));
+    SetFont(wxFont(8, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
     RefreshItems(0, GetItemCount());
 }
 
