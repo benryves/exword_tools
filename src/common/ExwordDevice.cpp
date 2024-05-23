@@ -325,7 +325,7 @@ bool Exword::UploadFile(wxFileName filename)
         if (file.IsOpened()) {
             char *data = new char[file.Length()];
             if (file.Read(data, file.Length()) == file.Length()) {
-                if (exword_send_file(m_device, (char*)wxConvLocal.cWX2MB(filename.GetFullName()).data(), data, file.Length()) == EXWORD_SUCCESS)
+                if (exword_send_file(m_device, (char*)wxConvLocal.cWX2MB(filename.GetFullName().wc_str()).data(), data, file.Length()) == EXWORD_SUCCESS)
                     success = true;
             }
         }
@@ -341,9 +341,9 @@ bool Exword::DeleteFile(wxString filename, unsigned long flags)
          return false;
 
     if (m_mode == TEXT && flags & 0x2)
-        rsp = exword_remove_file(m_device, (char*)wxConvLocal.cWX2MB(filename).data(), 1);
+        rsp = exword_remove_file(m_device, (char*)wxConvLocal.cWX2MB(filename.wc_str()).data(), 1);
     else
-        rsp = exword_remove_file(m_device, (char*)wxConvLocal.cWX2MB(filename).data(), 0);
+        rsp = exword_remove_file(m_device, (char*)wxConvLocal.cWX2MB(filename.wc_str()).data(), 0);
     return (rsp == EXWORD_SUCCESS);
 }
 
